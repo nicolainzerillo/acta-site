@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>Acta — Informativa sulla Privacy / Privacy Policy</title>
+<meta name="description" content="Informativa sulla Privacy di Acta (IT / EN): applicazione desktop 100% locale, nessuna raccolta dati, nessuna connessione verso server esterni.">
+<link rel="canonical" href="https://nicolainzerillo.github.io/acta-site/privacy.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+  :root {
+    --bg: #F8FAFC;
+    --surface: #FFFFFF;
+    --surface-soft: #F1F5F9;
+    --border: #E2E8F0;
+    --text: #334155;
+    --text-strong: #0F172A;
+    --muted: #64748B;
+    --accent: #2563EB;
+    --accent-soft: #EFF6FF;
+    --accent-border: #BFDBFE;
+    --ok-bg: #ECFDF5;
+    --ok-fg: #065F46;
+    --ok-border: #A7F3D0;
+    --code-bg: #F1F5F9;
+    --shadow: 0 8px 28px rgba(15, 23, 42, 0.05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0B1120;
+      --surface: #111827;
+      --surface-soft: #1E293B;
+      --border: #1F2937;
+      --text: #CBD5E1;
+      --text-strong: #F8FAFC;
+      --muted: #94A3B8;
+      --accent: #60A5FA;
+      --accent-soft: rgba(37, 99, 235, 0.16);
+      --accent-border: rgba(96, 165, 250, 0.35);
+      --ok-bg: rgba(16, 185, 129, 0.14);
+      --ok-fg: #6EE7B7;
+      --ok-border: rgba(52, 211, 153, 0.32);
+      --code-bg: #1E293B;
+      --shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI Variable Text', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+  }
+  .topbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-strong);
+    text-decoration: none;
+  }
+  .brand:hover .brand-title {
+    color: var(--accent);
+  }
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #3884FF 0%, #2563EB 52%, #172554 100%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.28);
+    flex-shrink: 0;
+  }
+  .brand-title { font-size: 18px; font-weight: 700; letter-spacing: -0.01em; transition: color 0.15s ease; }
+  .brand-sub { font-size: 13px; color: var(--muted); display: block; line-height: 1.2; }
+  .topbar-right {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .back-link {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .back-link:hover {
+    color: var(--text-strong);
+  }
+  .lang-nav {
+    display: inline-flex;
+    gap: 6px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 4px;
+    border-radius: 10px;
+  }
+  .lang-nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 7px;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .lang-nav a:hover {
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 34px 36px;
+    margin-bottom: 28px;
+    box-shadow: var(--shadow);
+  }
+  @media (max-width: 640px) {
+    .card { padding: 24px 20px; }
+  }
+  .eyebrow {
+    display: inline-block;
+    background: var(--ok-bg);
+    color: var(--ok-fg);
+    border: 1px solid var(--ok-border);
+    font-weight: 600;
+    font-size: 12.5px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+  h1 {
+    margin: 0 0 6px;
+    font-size: 27px;
+    line-height: 1.2;
+    color: var(--text-strong);
+    letter-spacing: -0.015em;
+  }
+  .meta {
+    margin: 0 0 22px;
+    font-size: 13.5px;
+    color: var(--muted);
+  }
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 12px;
+    margin: 0 0 26px;
+  }
+  .summary-item {
+    background: var(--surface-soft);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 13px 14px;
+  }
+  .summary-item strong {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .summary-item span {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-strong);
+  }
+  h2 {
+    font-size: 18px;
+    margin: 26px 0 8px;
+    color: var(--text-strong);
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+  }
+  h2:first-of-type { border-top: 0; padding-top: 0; }
+  p, li {
+    font-size: 14.8px;
+    color: var(--text);
+  }
+  p { margin: 8px 0 10px; }
+  ul { padding-left: 20px; margin: 8px 0 12px; }
+  li { margin-bottom: 6px; }
+  .card a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .card a:hover { text-decoration: underline; }
+  code {
+    font-family: Consolas, ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 13px;
+    background: var(--code-bg);
+    color: var(--text-strong);
+    padding: 1px 6px;
+    border-radius: 5px;
+  }
+  .note-box {
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 16px 0 6px;
+    font-size: 14px;
+    color: var(--text-strong);
+  }
+  footer {
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 12px;
+  }
+  footer a {
+    color: var(--muted);
+    text-decoration: none;
+  }
+  footer a:hover {
+    color: var(--text-strong);
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="topbar">
+    <a class="brand" href="./">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 32 32" fill="none">
+          <polygon points="14.4,6.4 17.6,6.4 25.5,24.8 21.2,24.8 16,12 10.8,24.8 6.5,24.8" fill="#FFFFFF"/>
+          <circle cx="16" cy="21.4" r="3.2" fill="#F43F5E"/>
+        </svg>
+      </span>
+      <div>
+        <span class="brand-title">Acta</span>
+        <span class="brand-sub">Informativa sulla Privacy · Privacy Policy</span>
+      </div>
+    </a>
+    <div class="topbar-right">
+      <a class="back-link" href="./">Pagina di Acta</a>
+      <nav class="lang-nav" aria-label="Language">
+        <a href="#it">Italiano</a>
+        <a href="#en">English</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="card" id="it" lang="it">
+    <span class="eyebrow">Applicazione locale · Nessuna raccolta dati</span>
+    <h1>Informativa sulla Privacy — Acta</h1>
+    <p class="meta"><strong>Ultimo aggiornamento:</strong> 25 novembre 2026 &nbsp;·&nbsp; <strong>Sviluppatore:</strong> Nicola Inzerillo &nbsp;·&nbsp; <strong>Applicazione:</strong> Acta (Windows Desktop / Microsoft Store)</p>
+
+    <div class="summary-grid">
+      <div class="summary-item">
+        <strong>Dati raccolti</strong>
+        <span>Nessuno</span>
+      </div>
+      <div class="summary-item">
+        <strong>Connessioni esterne</strong>
+        <span>Nessuna (solo locale)</span>
+      </div>
+      <div class="summary-item">
+        <strong>Pubblicità e analytics</strong>
+        <span>Assenti</span>
+      </div>
+      <div class="summary-item">
+        <strong>Elaborazione e file</strong>
+        <span>Solo sul tuo PC</span>
+      </div>
+    </div>
+
+    <h2>1. Nessuna raccolta o trasmissione di dati personali</h2>
+    <p>
+      <strong>Acta</strong> è un'applicazione desktop progettata per funzionare interamente in locale sul dispositivo dell'utente.
+      Acta <strong>non raccoglie, non trasmette, non vende e non condivide</strong> alcun dato personale, screenshot, testo, documento o telemetria con lo sviluppatore o con terze parti.
+    </p>
+    <p>
+      L'applicazione non richiede account o registrazione, non include SDK pubblicitari o di analisi e non effettua connessioni verso server esterni.
+    </p>
+
+    <h2>2. Dati creati e conservati esclusivamente sul tuo dispositivo</h2>
+    <ul>
+      <li><strong>Registrazioni ed esportazioni:</strong> gli screenshot, le bozze dell'editor e i file esportati (PDF, Word <code>.docx</code>, HTML e Markdown <code>.zip</code>) vengono salvati solo nella cartella archivio locale sul tuo PC (predefinita: <code>~/Acta_SOP</code>, oppure altra cartella scelta da te).</li>
+      <li><strong>Preferenze e log diagnostici locali:</strong> le impostazioni dell'interfaccia (lingua, tema, cartella archivio) e un log diagnostico tecnico a rotazione (<code>logs\acta.log</code>, che registra solo errori tecnici senza screenshot, testi utente o password) sono salvati in <code>%LOCALAPPDATA%\Acta</code>.</li>
+      <li><strong>Editor locale Acta Studio:</strong> per modificare e salvare le bozze nel browser, Acta avvia un server HTTP locale vincolato al solo indirizzo di loopback <code>127.0.0.1</code> e protetto da un token casuale di sessione; nessun dato lascia il computer.</li>
+    </ul>
+
+    <h2>3. Come vengono usate le funzionalità di sistema</h2>
+    <ul>
+      <li><strong>Acquisizione schermo e Accessibilità (UI Automation):</strong> solo durante una sessione di registrazione avviata esplicitamente dall'utente (segnalata dalla barra flottante), Acta acquisisce gli screenshot dello schermo attivo sui clic oppure su comando manuale dell'utente (pulsante fotocamera o <code>Alt+Shift+C</code>) e interroga in locale Windows UI Automation per leggere, quando disponibile, l'etichetta del controllo cliccato e preparare la bozza del passo.</li>
+      <li><strong>Nessuna registrazione del testo digitato:</strong> Acta non registra mai i caratteri alfanumerici digitati sulla tastiera né le password; rileva soltanto le interazioni del mouse e le scorciatoie comando (come <code>Ctrl+C</code> o <code>Invio</code>).</li>
+      <li><strong>Controllo privacy locale (OCR su dispositivo):</strong> solo quando l'utente avvia manualmente <em>Controlla privacy</em> in Acta Studio, Acta analizza in locale testi e immagini tramite il motore OCR integrato di Windows (<code>Windows.Media.Ocr</code>) per proporre riquadri rivedibili su possibili dati sensibili (email, IBAN, codici fiscali, partite IVA, carte, password). Al salvataggio del file esportato, le aree oscurate subiscono una riduzione irreversibile dei pixel, così il contenuto coperto non resta recuperabile nell'output.</li>
+    </ul>
+    <div class="note-box">
+      <strong>Responsabilità di revisione:</strong> gli screenshot riflettono ciò che è visibile sullo schermo durante la registrazione e il controllo privacy automatico è uno strumento di supporto. Prima di condividere un documento esportato, verifica sempre che tutti i dati riservati siano oscurati come desideri.
+    </div>
+
+    <h2>4. Controllo, conservazione e cancellazione dei dati</h2>
+    <p>
+      Mantieni il controllo completo su tutti i file generati da Acta. Puoi eliminare singole registrazioni da <em>Acta Home</em> o rimuovere la cartella archivio da Esplora File in qualsiasi momento. La disinstallazione dell'app da <em>Impostazioni di Windows → App</em> rimuove automaticamente le preferenze e i log diagnostici salvati nel profilo applicativo (<code>%LOCALAPPDATA%\Acta</code>).
+    </p>
+
+    <h2>5. Servizi di terze parti e Microsoft Store</h2>
+    <p>
+      Acta non si collega a servizi cloud di terze parti. Download, aggiornamenti ed eventuale diagnostica di piattaforma gestiti dal <strong>Microsoft Store</strong> sono regolati dall'Informativa sulla privacy di Microsoft.
+    </p>
+
+    <h2>6. Modifiche all'informativa e contatti</h2>
+    <p>
+      Eventuali aggiornamenti futuri a questa informativa saranno pubblicati con la nuova data sia dentro l'applicazione (sezione <em>Privacy</em>) sia su questa pagina collegata alla scheda Microsoft Store. Per domande, segnalazioni o richieste relative alla privacy puoi contattare direttamente lo sviluppatore, <strong>Nicola Inzerillo</strong>, all'indirizzo <a href="mailto:inzerillo.nicola@gmail.com">inzerillo.nicola@gmail.com</a>.
+    </p>
+  </section>
+
+  <section class="card" id="en" lang="en">
+    <span class="eyebrow">Local application · No data collection</span>
+    <h1>Privacy Policy — Acta</h1>
+    <p class="meta"><strong>Last updated:</strong> November 25, 2026 &nbsp;·&nbsp; <strong>Developer:</strong> Nicola Inzerillo &nbsp;·&nbsp; <strong>Application:</strong> Acta (Windows Desktop / Microsoft Store)</p>
+
+    <div class="summary-grid">
+      <div class="summary-item">
+        <strong>Personal data collected</strong>
+        <span>None</span>
+      </div>
+      <div class="summary-item">
+        <strong>External network calls</strong>
+        <span>None (local only)</span>
+      </div>
+      <div class="summary-item">
+        <strong>Ads and analytics</strong>
+        <span>None</span>
+      </div>
+      <div class="summary-item">
+        <strong>Processing and files</strong>
+        <span>Only on your PC</span>
+      </div>
+    </div>
+
+    <h2>1. No Collection or Transmission of Personal Data</h2>
+    <p>
+      <strong>Acta</strong> is a desktop application designed to operate entirely locally on your device.
+      Acta <strong>does not collect, transmit, sell, or share</strong> any personal information, screenshots, text, exported documents, or usage telemetry with the developer or any third party.
+    </p>
+    <p>
+      The application requires no account or sign-in, contains no advertising or analytics SDKs, and makes no outbound internet connections.
+    </p>
+
+    <h2>2. Data Stored Exclusively on Your Device</h2>
+    <ul>
+      <li><strong>Recordings and exports:</strong> captured screenshots, step drafts, and exported files (PDF, Word <code>.docx</code>, HTML, and Markdown <code>.zip</code>) are stored solely in your local archive folder (default: <code>~/Acta_SOP</code>, or another folder you select).</li>
+      <li><strong>Local preferences and diagnostic logs:</strong> UI settings (language, theme, archive folder) and a local rotating error log (<code>logs\acta.log</code>, recording technical errors only — never screenshots, user text, or passwords) are stored under <code>%LOCALAPPDATA%\Acta</code>.</li>
+      <li><strong>Local Acta Studio editor:</strong> to edit drafts in your browser, Acta runs a local HTTP server bound strictly to loopback (<code>127.0.0.1</code>) and protected by a random per-session token; no traffic leaves your computer.</li>
+    </ul>
+
+    <h2>3. How System Capabilities Are Used</h2>
+    <ul>
+      <li><strong>Screen capture and Accessibility (UI Automation):</strong> only while a user-initiated recording session is active (indicated by the floating toolbar), Acta captures screenshots of the active display on clicks or when manually triggered by the user (camera button or <code>Alt+Shift+C</code>), and queries Windows UI Automation locally to read accessible control labels where available so step instructions can be drafted automatically.</li>
+      <li><strong>No free-text keystroke recording:</strong> Acta never records typed text or passwords; it captures only mouse interactions and command shortcuts (such as <code>Ctrl+C</code> or <code>Enter</code>).</li>
+      <li><strong>On-device Privacy Check (local OCR):</strong> only when you manually run <em>Privacy check</em> in Acta Studio, Acta scans drafts and screenshots locally via the native Windows OCR engine (<code>Windows.Media.Ocr</code>) to propose reviewable redaction boxes for potentially sensitive data (emails, IBANs, tax IDs, payment cards, labeled secrets). Upon export, redacted areas undergo irreversible pixel downsampling so covered content cannot be recovered from the output file.</li>
+    </ul>
+    <div class="note-box">
+      <strong>User review notice:</strong> captured screenshots contain whatever is visible on screen during recording, and automated sensitive-data detection is provided as an assistive check. Always review exported documents before sharing them.
+    </div>
+
+    <h2>4. Data Control, Retention, and Deletion</h2>
+    <p>
+      You retain full control over all files created with Acta. You can delete individual recordings in <em>Acta Home</em> or remove the archive folder in File Explorer at any time. Uninstalling the app via <em>Windows Settings → Apps</em> automatically removes local preferences and diagnostic logs stored under the application data folder (<code>%LOCALAPPDATA%\Acta</code>).
+    </p>
+
+    <h2>5. Third-Party Services and Microsoft Store</h2>
+    <p>
+      Acta does not connect to external cloud services. Download, updates, and platform diagnostics handled by the <strong>Microsoft Store</strong> are governed by the Microsoft Privacy Statement.
+    </p>
+
+    <h2>6. Policy Updates and Contact</h2>
+    <p>
+      If this Privacy Policy is updated in the future, the revised version and effective date will be published both inside the application (<em>Privacy</em>) and on this page linked from the Microsoft Store listing. For privacy questions or support requests, contact the developer, <strong>Nicola Inzerillo</strong>, at <a href="mailto:inzerillo.nicola@gmail.com">inzerillo.nicola@gmail.com</a>.
+    </p>
+  </section>
+
+  <footer>
+    © 2026 Nicola Inzerillo · Acta · <a href="./">Pagina di Acta / Acta Home</a>
+  </footer>
+</div>
+</body>
+</html>
