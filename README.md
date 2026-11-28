@@ -1,4 +1,4 @@
-# Acta — Sito pubblico e Informativa sulla Privacy
+# Acta - Sito pubblico e Informativa sulla Privacy
 
 Questo repository ospita la pagina pubblica di **Acta** per Windows e l'Informativa sulla Privacy (IT / EN) richieste per la scheda Microsoft Store.
 
